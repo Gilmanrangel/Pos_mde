@@ -13,6 +13,5 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer install --optimize-autoloader
 
 RUN php artisan config:clear
-RUN php artisan migrate --force
 
-CMD php artisan serve --host=0.0.0.0 --port=8080
+CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8080
