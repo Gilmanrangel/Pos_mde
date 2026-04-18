@@ -1,0 +1,403 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================= GLOBAL ================= */
+
+body {
+    background: #f1f5f9;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1e293b, #0f172a);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar h4 {
+    font-weight: 600;
+}
+
+.sidebar.collapsed h4 {
+    display: none;
+}
+
+.sidebar a,
+.sidebar button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    margin-bottom: 6px;
+    border-radius: 10px;
+    color: #cbd5e1;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.sidebar a:hover,
+.sidebar button:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+}
+
+.sidebar a.active {
+    background: #4f46e5;
+    color: #fff;
+}
+
+.sidebar.collapsed span {
+    display: none;
+}
+
+.sidebar.collapsed a,
+.sidebar.collapsed button {
+    justify-content: center;
+}
+
+.sidebar i {
+    font-size: 18px;
+    min-width: 20px;
+}
+
+
+/* ================= LOGOUT ================= */
+
+.logout {
+    margin-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 10px;
+}
+
+.logout button:hover {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+}
+
+
+/* ================= CONTENT ================= */
+
+.content {
+    padding: 20px;
+    width: 100%;
+}
+
+
+/* ================= TOPBAR ================= */
+
+.topbar {
+    background: #ffffff;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    border: 1px solid #eef2f7;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
+
+
+/* USER BOX */
+.user-box {
+    background: #ffffff;
+    padding: 6px 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    font-size: 14px;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+    border-radius: 14px;
+    border: 1px solid #eef2f7;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    transition: all 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+
+/* ================= TABLE ================= */
+
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.table thead {
+    background: #f9fafb;
+    font-weight: 600;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.table tbody tr {
+    transition: 0.2s;
+}
+
+.table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+
+/* ================= BADGE ================= */
+
+.badge {
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+
+/* ================= BUTTON SYSTEM ================= */
+
+.btn-modern {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(99,102,241,0.2);
+}
+
+.btn-modern:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(99,102,241,0.3);
+    color: white;
+}
+
+.btn-soft {
+    background: #f1f5f9;
+    color: #334155;
+    border-radius: 10px;
+    padding: 6px 12px;
+    transition: 0.2s;
+}
+
+.btn-soft:hover {
+    background: #e2e8f0;
+}
+
+.btn-soft-primary {
+    background: #e0ecff;
+    color: #2563eb;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.btn-soft-primary:hover {
+    background: #c7dbff;
+}
+
+.btn-soft-danger {
+    background: #ffe2e2;
+    color: #dc2626;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.btn-soft-danger:hover {
+    background: #ffc9c9;
+}
+
+.btn-soft-success {
+    background: #dcfce7;
+    color: #16a34a;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.btn-soft-success:hover {
+    background: #bbf7d0;
+}
+
+
+/* ================= ICON ================= */
+
+.icon-box {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-stat {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+
+/* ================= ANIMATION ================= */
+
+.fade-in {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ================= COLOR VARIANT ================= */
+
+.bg-primary-soft {
+    background: #e0ecff;
+    color: #2563eb;
+}
+
+.bg-success-soft {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.bg-warning-soft {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.bg-danger-soft {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+
+/* ================= SORTABLE HEADER ================= */
+
+.sortable {
+    cursor: pointer;
+    color: #64748b;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.sortable:hover {
+    color: #1e293b;
+}
+
+.sort-icon::after {
+    content: '';
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.sortable.asc .sort-icon::after {
+    content: '▲';
+    color: #4f46e5;
+}
+
+.sortable.desc .sort-icon::after {
+    content: '▼';
+    color: #4f46e5;
+}
+
+.sortable.active {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* ================= DASHBOARD CLEAN UPGRADE ================= */
+
+/* spacing lebih ringan */
+.container-fluid {
+    max-width: 1200px;
+}
+
+/* card lebih clean */
+.card {
+    border-radius: 12px;
+    border: 1px solid #eef2f7;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* table clean minimal */
+.table {
+    background: #fff;
+}
+
+.table thead {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.table tbody tr {
+    transition: 0.2s;
+}
+
+.table tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* button lebih modern */
+.btn-modern {
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 14px;
+}
+
+.btn-soft,
+.btn-soft-primary {
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+/* input clean */
+.form-control {
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* header spacing */
+h5 {
+    letter-spacing: -0.3px;
+}
+
+/* chart spacing */
+canvas {
+    display: block;
+}
+
+/* fade animation */
+.fade-in {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
