@@ -18,7 +18,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Install PHP dependencies
-RUN composer install --optimize-autoloader --no-dev
+RUN composer install --optimize-autoloader 
 
 # 🔥 Build frontend (INI YANG SEBELUMNYA KURANG)
 RUN npm install
